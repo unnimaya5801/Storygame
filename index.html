@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dream Maze</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <h1 id="title">The Dream Maze</h1>
+        <img id="sigil-display" src="" alt="Collected Sigil">
+        <p id="intro-text">You wake up in a shifting dream maze. The air hums with whispers. You don’t remember how you got here, but you know one thing: You must escape.</p>
+        <button id="start-button">Enter the Maze</button>
+        <!-- Temporary display when a sigil is collected -->
+
+
+        <div id="fog-container">
+            <div class="fog"></div>
+            <div class="fog"></div>
+            <div class="fog"></div>
+        </div>  
+    
+        <div id="game-screen" class="hidden">
+            <p id="game-text"></p>
+            <div id="choices"></div>          
+
+            <div id="inventory">
+                <img id="sigil-memory" src="assets/sigil-memory.png" alt="Sigil of Memory" class="sigil hidden">
+                <img id="sigil-perception" src="assets/sigil-perception.png" alt="Sigil of Perception" class="sigil hidden">
+                <img id="sigil-resolve" src="assets/sigil-resolve.png" alt="Sigil of Resolve" class="sigil hidden">
+                <img id="sigil-fear" src="assets/sigil-fear.png" alt="Sigil of Fear" class="sigil hidden">
+                <img id="sigil-truth" src="assets/sigil-truth.png" alt="Sigil of Truth" class="sigil hidden">
+            </div>
+
+            <!-- 🔹 NEW: Dedicated div for image-based choices -->
+            <div id="image-choices" class="hidden"></div>
+            <div id="choices" class="hidden"></div>
+
+            <div id="puzzle-container" class="hidden">
+                <p id="puzzle-text"></p>
+                <input type="text" id="puzzle-input" placeholder="Type your answer..." />
+                <button id="puzzle-submit">Submit</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
